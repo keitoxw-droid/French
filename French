@@ -15,7 +15,7 @@ local __BTR_DEC = function(b, k)
         return r
     end
     for i = 1, #b do
-        s[i] = string.char(bxor(b[i], k))
+        s[i] = string.char(math.floor(bxor(b[i], k)) % 256)
     end
     return table.concat(s)
 end
